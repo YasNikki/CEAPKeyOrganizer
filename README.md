@@ -5,9 +5,3 @@
 *Features:*
 - CRUD keys, teachers & items.
 - Create logs of keys system.
-
-### Como usar | How to use:
-
-- Start local mySQL (XAMPP recommended)
-- Install .SQL script (HeidiSQL recommended)
-- Open and Use.

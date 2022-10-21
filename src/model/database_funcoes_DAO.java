@@ -565,7 +565,7 @@ public class database_funcoes_DAO {
         
     }
     
-    public static void desregistraChave(){
+    public static void desregistraItem(){
         
         controller.Conexao_DB.carregaDriver();
 
@@ -605,7 +605,7 @@ public class database_funcoes_DAO {
         
     }
     
-    public static void desregistraItem(){
+    public static void desregistraChaves(){
         
         controller.Conexao_DB.carregaDriver();
 
@@ -619,16 +619,18 @@ public class database_funcoes_DAO {
         
         DefaultTableModel model = (DefaultTableModel) Chave_CEAP_GUI.registros.getModel();
         int row = Chave_CEAP_GUI.registros.getSelectedRow();
-        String data = Chave_CEAP_GUI.registros.getModel().getValueAt(row, 3).toString();
+        String data = Chave_CEAP_GUI.registros.getModel().getValueAt(row, 4).toString();
+        String horario = Chave_CEAP_GUI.registros.getModel().getValueAt(row, 3).toString();
         String key = Chave_CEAP_GUI.registros.getModel().getValueAt(row, 1).toString();
         
-        String SQL = "delete from registrochaves where reg_chave=? and reg_horario=?";
+        String SQL = "delete from registrochaves where reg_chave=? and reg_horario=? and reg_data=?";
         
         
         try{
             PreparedStatement insert = (PreparedStatement) con.prepareStatement(SQL);
             insert.setString(1, key);
-            insert.setString(2, data);
+            insert.setString(2, horario);
+            insert.setString(3, data);
             insert.execute();
             
         }catch (Exception ex) {

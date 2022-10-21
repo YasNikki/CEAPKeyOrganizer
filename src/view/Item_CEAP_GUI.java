@@ -117,7 +117,15 @@ public class Item_CEAP_GUI extends javax.swing.JFrame {
             new String [] {
                 "Professor", "Item", "Horário", "Data", "Pendência"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(registros);
 
         PainelPrincipal.add(jScrollPane1);
