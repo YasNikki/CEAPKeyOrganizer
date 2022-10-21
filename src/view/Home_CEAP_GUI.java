@@ -34,8 +34,6 @@ public class Home_CEAP_GUI extends javax.swing.JFrame {
         botaoChaves = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         panelImage2 = new org.edisoncor.gui.panel.PanelImage();
-        Titulo = new javax.swing.JLabel();
-        Subtitulo = new javax.swing.JLabel();
         Copyright = new javax.swing.JLabel();
         botaoItens = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -45,6 +43,7 @@ public class Home_CEAP_GUI extends javax.swing.JFrame {
         panelImage4 = new org.edisoncor.gui.panel.PanelImage();
         botaoSair = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        panelImage5 = new org.edisoncor.gui.panel.PanelImage();
         panelImage1 = new org.edisoncor.gui.panel.PanelImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -111,18 +110,6 @@ public class Home_CEAP_GUI extends javax.swing.JFrame {
 
         jPanel1.add(botaoChaves);
         botaoChaves.setBounds(0, 160, 260, 50);
-
-        Titulo.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Titulo.setText("CEAP");
-        jPanel1.add(Titulo);
-        Titulo.setBounds(10, 10, 240, 40);
-
-        Subtitulo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        Subtitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Subtitulo.setText("Gerenciamento de Chaves");
-        jPanel1.add(Subtitulo);
-        Subtitulo.setBounds(10, 54, 240, 20);
 
         Copyright.setText("@yasnikki - @sle");
         jPanel1.add(Copyright);
@@ -281,6 +268,22 @@ public class Home_CEAP_GUI extends javax.swing.JFrame {
         jPanel1.add(botaoSair);
         botaoSair.setBounds(0, 340, 260, 50);
 
+        panelImage5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Logo.png"))); // NOI18N
+
+        javax.swing.GroupLayout panelImage5Layout = new javax.swing.GroupLayout(panelImage5);
+        panelImage5.setLayout(panelImage5Layout);
+        panelImage5Layout.setHorizontalGroup(
+            panelImage5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 240, Short.MAX_VALUE)
+        );
+        panelImage5Layout.setVerticalGroup(
+            panelImage5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 90, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(panelImage5);
+        panelImage5.setBounds(10, 10, 240, 90);
+
         FundoPrincipal.add(jPanel1);
         jPanel1.setBounds(0, 0, 260, 490);
 
@@ -429,8 +432,6 @@ public class Home_CEAP_GUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Copyright;
     private javax.swing.JPanel FundoPrincipal;
-    private javax.swing.JLabel Subtitulo;
-    private javax.swing.JLabel Titulo;
     private javax.swing.JPanel botaoChaves;
     private javax.swing.JPanel botaoDados;
     private javax.swing.JPanel botaoItens;
@@ -444,5 +445,6 @@ public class Home_CEAP_GUI extends javax.swing.JFrame {
     private org.edisoncor.gui.panel.PanelImage panelImage2;
     private org.edisoncor.gui.panel.PanelImage panelImage3;
     private org.edisoncor.gui.panel.PanelImage panelImage4;
+    private org.edisoncor.gui.panel.PanelImage panelImage5;
     // End of variables declaration//GEN-END:variables
 }

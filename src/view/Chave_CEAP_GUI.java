@@ -115,7 +115,15 @@ public class Chave_CEAP_GUI extends javax.swing.JFrame {
             new String [] {
                 "Professor(a)", "Chave", "Tipo", "Horário", "Data", "Pendência"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(registros);
 
         PainelPrincipal.add(jScrollPane1);
@@ -187,7 +195,7 @@ public class Chave_CEAP_GUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
-        database_funcoes_DAO.desregistraChave();
+        database_funcoes_DAO.desregistraChaves();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
